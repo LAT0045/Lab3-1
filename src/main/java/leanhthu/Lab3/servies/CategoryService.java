@@ -1,5 +1,6 @@
 package leanhthu.Lab3.servies;
 
+import leanhthu.Lab3.entity.Book;
 import leanhthu.Lab3.entity.Category;
 import leanhthu.Lab3.repository.ICategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,13 @@ public class CategoryService {
     public void deleteCategory(Long id)
     {
         categoryRepository.deleteById(id);
+    }
+
+    public void addCategory(Category category){
+        categoryRepository.save(category);
+    }
+    public void editCategory(Category category){
+        categoryRepository.save(category);
     }
 
 }
